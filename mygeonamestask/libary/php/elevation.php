@@ -5,8 +5,8 @@
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);
     
-    $url='http://api.geonames.org/oceanJSON?formatted=true&lat='. $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=mark26zy&style=full';
-   
+    $url='http://api.geonames.org/srtm1JSON?formatted=true&lat='. $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=mark26zy&style=full';
+
         $ch = curl_init();
         curl_setopt($ch , CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER , true );

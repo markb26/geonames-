@@ -4,32 +4,31 @@
 
 	<head>
 		<meta charset="utf-8">
-    
 		<title>Geonames</title>
 		<meta name="description" content="geonames">
 		<meta name="author" content="Mark Bargh">
 	</head>
 
 	<body>
-            	
-
         <select id="oceanlat">
-            <option value="ec">51</option>
-            <option value="sa">-41</option>
+            <option value="51">51</option>
+            <option value="-41">-41</option>
+            
         </select>
             
         <select id="oceanlng">
-            <option value="ec">1</option>
-            <option value="sa">0</option>
+            <option value="1">1</option>
+            <option value="0">0</option>
+            <option value="100">100</option>
         </select>
             
         <button id="btn">Submit</button>
  
         <div>           
         <table>
-            <tr>
-            <td> Distance: </td>
-                <td id="distance">
+           <tr>
+          <td> Distance: </td>
+                <td id="distance">  
                                     
                 </td>
             
@@ -53,6 +52,52 @@
             
                 </table>
             </div>
+<br>
+<br>
+            <input list='elevationlat' type="text" list="latitude" />
+            <datalist id="elevationlat">
+              <option value='51'>
+              <option value='48.8'>
+                <option value='41.3'>
+            </datalist>  
+
+            
+            <input list='elevationlng' type="text" list="Longitude" />
+            <datalist id="elevationlng">
+              <option value='-0.12'>
+              <option value='2.35'>
+              <option value='2.17'>
+            </datalist>  
+    
+    
+<button id="submit">Submit</button>
+
+<div>           
+    <table>
+        <tr>
+       <td> Elevation: </td>
+             <td id="elevation">  
+                                 
+             </td>
+         
+             </tr>
+         
+             <tr>
+             <td> longitude: </td>
+             <td id="elelng">
+                                 
+             </td>
+             </tr>
+             <tr>
+                <td> latitude: </td>
+                <td id="elelat">
+                                    
+                </td>
+                </tr>
+         
+             </table>
+    </div>
+
 
         <script type="application/javascript" src="libary/js/jquery-2.2.3.min.js"></script> 
         <script type="application/javascript" src="libary/js/script.js"></script>
