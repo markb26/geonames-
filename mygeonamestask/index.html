@@ -8,7 +8,7 @@
 		<meta name="description" content="geonames">
 		<meta name="author" content="Mark Bargh">
 	</head>
-
+<!--ocean start-->
 	<body>
         <select id="oceanlat">
             <option value="51">51</option>
@@ -52,23 +52,24 @@
             
                 </table>
             </div>
-<br>
-<br>
-            <input list='elevationlat' type="text" list="latitude" />
-            <datalist id="elevationlat">
-              <option value='51'>
-              <option value='48.8'>
-                <option value='41.3'>
-            </datalist>  
 
-            
-            <input list='elevationlng' type="text" list="Longitude" />
-            <datalist id="elevationlng">
-              <option value='-0.12'>
-              <option value='2.35'>
-              <option value='2.17'>
-            </datalist>  
+        <!--ocean finish-->
+<br>
+<br>
+<!--elevation start-->
+<select id="elevationlat">
+    <option value="51">51</option>
+    <option value="48.8">48.8</option>
+    <option value="41.3">41.3</option>
     
+</select>
+
+<select id="elevationlng">
+    <option value="-0.12">-0.12</option>
+    <option value="2.35">2.35</option>
+    <option value="2.17">2.17</option>
+    
+</select>
     
 <button id="submit">Submit</button>
 
@@ -84,19 +85,60 @@
          
              <tr>
              <td> longitude: </td>
-             <td id="elelng">
+             <td id="lng">
                                  
              </td>
              </tr>
              <tr>
                 <td> latitude: </td>
-                <td id="elelat">
+                <td id="lat">
                                     
                 </td>
                 </tr>
          
              </table>
     </div>
+<!--elevation finish-->
+    <br>
+    <br>
+<!-- start Airport-->
+    <select id="airport">
+        <option value="EGLL">Heathrow</option> <!--Heathrow -->
+        <option value="EGLC">London City</option> <!--London City -->
+        <option value="LFPG">Paris</option> <!--Paris -->
+        
+    </select>
+        
+    <button id="btn2">Submit</button>
+
+    <div>           
+    <table>
+       <tr>
+      <td> countryCode: </td>
+            <td id="countryCode">  
+                                
+            </td>
+        
+            </tr>
+        
+            <tr>
+            <td> temperature: </td>
+            <td id="temperature">
+                                
+            </td>
+        
+            </tr>
+
+            <tr>
+                <td> humidity: </td>
+                <td id="humidity">
+                                    
+                </td>
+            
+                </tr>
+        
+            </table>
+        </div>
 
 
         <script type="application/javascript" src="libary/js/jquery-2.2.3.min.js"></script> 

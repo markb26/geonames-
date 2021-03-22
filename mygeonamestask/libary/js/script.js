@@ -1,4 +1,4 @@
-
+//ocean
 $('#btn').click(function() {
 
     $.ajax({
@@ -27,7 +27,7 @@ $('#btn').click(function() {
         }
     }); 
 
-
+//elevation
 });
 
 $('#submit').click(function() {
@@ -47,9 +47,12 @@ $('#submit').click(function() {
 
             if (result.status.name == "ok") {
 
-               $('#elevation').html(result['data']['srtm1']['elevation']);
-                $('#elelng').html(result['data']['srtm1']['longitude']);
-                $('#elelat').html(result['data']['srtm1']['latitude']);
+                $('#elevation').html(result['data']['srtm1']);
+                $('#lng').html(result['data']['lng']);
+                $('#lat').html(result['data']['lat']);
+               //$('#strm1').html(result['data']['srtm1']['srtm1']);
+                //$('#lng').html(result['data']['srtm1']['lng']);
+                //$('#lat').html(result['data']['srtm1']['lat']);
                 
             }
         
@@ -60,4 +63,33 @@ $('#submit').click(function() {
     }); 
 
 
+});
+//Airport 
+$('#btn2').click(function() { 
+
+    $.ajax({
+        url: "libary/php/weather.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+        ICAO: $('#airport').val()
+            
+        },
+        success: function(result) {
+
+            console.log(result);
+
+            if (result.status.name == "ok") {
+
+               $('#countryCode').html(result['data']['weatherObservation']['countryCode']);
+               $('#temperature').html(result['data']['weatherObservation']['temperature']);
+               $('#humidity').html(result['data']['weatherObservation']['humidity']);
+         
+            }
+        
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            
+        }
+    }); 
 });
